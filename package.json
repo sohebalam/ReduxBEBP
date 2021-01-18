@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "nodemon backend/server",
+    "server": "npm start --prefix backend",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  }
+}
